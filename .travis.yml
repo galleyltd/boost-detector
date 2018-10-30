@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "latest"
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install -g @angular/cli
+script:
+  - ng lint && ng build --prod
+deploy:
+  provider: pages
+  target-branch: gh-pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/boost-detector
+  on:
+    branch: master
