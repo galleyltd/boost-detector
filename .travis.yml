@@ -7,7 +7,7 @@ cache:
 before_script:
   - npm install -g @angular/cli
 script:
-  - ng build --prod --base-href boost-detector
+  - ng build --prod --base-href "https://galleyltd.github.io/boost-detector/"
 deploy:
   provider: pages
   target-branch: gh-pages
