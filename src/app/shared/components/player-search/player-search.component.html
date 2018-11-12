@@ -1,0 +1,12 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Player" aria-label="Player" [matAutocomplete]="auto" [formControl]="myControl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let player of filteredPlayers | async" [value]="player.personaname" (onSelectionChange)="onSelectionChanged($event, player)">
+        <img class="example-option-img" aria-hidden [src]="player.avatarfull" height="25">
+        <span>{{player.personaname}}</span> |
+        <small>Account ID: {{player.account_id}}</small>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
