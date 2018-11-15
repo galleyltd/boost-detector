@@ -4,6 +4,7 @@ export let APP_CONFIG = new InjectionToken('app.config');
 
 const serverURL = 'https://boost-detector.westeurope.cloudapp.azure.com';
 const opendotaURL = 'https://api.opendota.com/api';
+
 export const AppConfig = {
     routes: {
         account: 'account',
@@ -11,10 +12,14 @@ export const AppConfig = {
     },
     endpoints: {
         api: {
-            checkAccount: (accountId: string) => `${serverURL}/accounts/${accountId}/checks`
+            checkAccount(accountId: string): string {
+                return `${serverURL}/accounts/${accountId}/checks`;
+            }
         },
         opendota: {
-            search: (query: string) => `${opendotaURL}/search?q=${query}`
+            search(query: string): string {
+                return `${opendotaURL}/search?q=${query}`;
+            }
         }
-    },
+    }
 };
