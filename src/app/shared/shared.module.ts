@@ -5,8 +5,6 @@ import { CommonModule } from '@angular/common';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PlayerSearchComponent } from './components/player-search/player-search.component';
 
@@ -17,8 +15,6 @@ import { PlayerSearchComponent } from './components/player-search/player-search.
         HomePageComponent,
     ],
     imports: [
-        BrowserModule,
-        HttpClientModule,
         LayoutModule,
         MaterialModule,
         CommonModule,

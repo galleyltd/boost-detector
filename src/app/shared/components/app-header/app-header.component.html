@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>{{ title }}</span>
+    <button mat-button (click)="goHome()">{{ title }}</button>
     <span class="header-spacer"></span>
     <a mat-button onclick="window.open('https://github.com/galleyltd/boost-detector', '_blank')">
       <img class="github-header-link" src="assets/img/github-circle-white-transparent.svg" alt="boost-detector">

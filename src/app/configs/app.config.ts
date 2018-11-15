@@ -1,15 +1,20 @@
-import { InjectionToken } from '@angular/core';
+import { InjectionToken, isDevMode } from '@angular/core';
 
 export let APP_CONFIG = new InjectionToken('app.config');
 
-const serverURL = 'https://boost-detector.westeurope.cloudapp.azure.com'
-export const AppConfig: any = {
+const serverURL = 'https://boost-detector.westeurope.cloudapp.azure.com';
+const opendotaURL = 'https://api.opendota.com/api';
+export const AppConfig = {
     routes: {
-        player: 'player',
+        account: 'account',
         error404: '404'
     },
     endpoints: {
-        player: `${serverURL}/player`
-        // matches: `${serverURL}/matches`
+        api: {
+            checkAccount: (accountId: string) => `${serverURL}/accounts/${accountId}/checks`
+        },
+        opendota: {
+            search: (query: string) => `${opendotaURL}/search?q=${query}`
+        }
     },
 };

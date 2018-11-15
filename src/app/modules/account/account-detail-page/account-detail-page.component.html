@@ -1,0 +1,67 @@
+  <mat-card>
+    <mat-card-content>
+      <button mat-raised-button color="primary" (click)="analyze()">ANALYZE</button>
+    </mat-card-content>
+  </mat-card>
+
+<div fxLayout='row' fxLayoutWrap class="cards" *ngIf='boostResult'>
+  <div fxFlex="20" class="example-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>XPM</mat-card-title>
+        <mat-card-subtitle>Experience per minute</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{boostResult.xpmSpike}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="20" class="example-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>GPM</mat-card-title>
+        <mat-card-subtitle>Gold per minute</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{boostResult.gpmSpike}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="20" class="example-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>KPM</mat-card-title>
+        <mat-card-subtitle>Kills per minute</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{boostResult.kpmSpike}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="20" class="example-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>DMG</mat-card-title>
+        <mat-card-subtitle>Damage</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{boostResult.heroDamageSpike}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="20" class="example-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>KDA</mat-card-title>
+        <mat-card-subtitle>Kill / Death / Assist</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{boostResult.kdaSpike}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
